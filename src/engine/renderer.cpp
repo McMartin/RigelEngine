@@ -308,7 +308,7 @@ void Renderer::drawTexture(
     std::cbegin(QUAD_INDICES),
     std::cend(QUAD_INDICES),
     std::begin(indices),
-    [currentVertexCount](const GLushort index) {
+    [currentVertexCount](const GLushort index) -> GLushort {
       return index + currentVertexCount;
     });
 
